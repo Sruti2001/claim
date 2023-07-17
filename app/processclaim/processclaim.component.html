@@ -1,0 +1,58 @@
+<div class="container ">
+    <h2>Claim Details based on Claim ID</h2>
+    <div *ngIf="claim">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Claim ID:</strong> {{ claim.id }}
+        </li>
+        <li class="list-group-item">
+            <strong>Policy ID:</strong> {{ claim.policyId }}
+          </li>
+        <li class="list-group-item">
+          <strong>Username:</strong> {{ claim.username }}
+        </li>
+        <li class="list-group-item">
+          <strong>Subscription ID:</strong> {{ claim.subscriptionId }}
+        </li>
+        <li class="list-group-item">
+          <strong>Date:</strong> {{ claim.claimDate }}
+        </li>
+        <li class="list-group-item">
+          <strong>Claim Type ID:</strong> {{ claim.claimTypeId }}
+        </li>
+        <li class="list-group-item">
+          <strong>Claim Summary:</strong> {{ claim.claimSummary }}
+        </li>
+        <li class="list-group-item">
+          <strong>Claim Detail:</strong> {{ claim.claimDetails }}
+        </li>
+        <li class="list-group-item">
+          <strong>Is Raised By Policy Holders:</strong> {{ claim.isRaisedByPolicyHolder }}
+        </li>
+        <li class="list-group-item">
+            <strong>Claimant Name:</strong> {{ claim.claimantName }}
+        </li>
+        <li class="list-group-item">
+            <strong>Claimant Date Of Birth:</strong> {{ claim.claimantDateOfBirth }}
+        </li>
+        <li class="list-group-item">
+            <strong>Claimant Address:</strong> {{ claim.claimantAddress }}
+        </li>
+        <li class="list-group-item">
+            <strong>Claimant ID Proof Type:</strong> {{ claim.claimantIdProofType }}
+        </li>
+        <li class="list-group-item">
+            <strong>Claimant ID Proof Number:</strong> {{ claim.claimantIdProofNumber }}
+        </li>
+        <li class="list-group-item">
+            <strong>Response ETA:</strong> {{ claim.responseETA }}
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button class="btn-accept" (click)="onAcceptClaimClick()">Accept</button>
+    </div>
+    <div>
+      <button class="btn-reject" (click)="onRejectClaimClick()">Reject</button>
+    </div>
+  </div>

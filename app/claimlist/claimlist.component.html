@@ -1,0 +1,34 @@
+<div class="container table table-striped ">
+<ul class="list-group ">
+  <div *ngIf="ispresent" >
+    <h2 class="claimListhadder text-center">Claim List</h2>
+  </div>
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Claim ID</th>
+        <th>Username</th>
+        <th>Subscription Id</th>
+        <th>Date</th>
+        <th>Claim Type ID</th>
+        <th>Claim Status</th>
+        <th>Process</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let claim of data">
+        <td>{{ claim.id }}</td>
+        <td>{{ claim.username }}</td>
+        <td>{{ claim.subscriptionId }}</td>
+        <td>{{ claim.claimDate }}</td>
+        <td>{{ claim.claimTypeId }}</td>
+        <td>{{ claim.claimStatus }}</td>
+        <td>
+          <button class="btn-process"  (click)="onProcessClaimClick(claim.id,claim.claimStatus)">Process</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</ul>
+</div>
